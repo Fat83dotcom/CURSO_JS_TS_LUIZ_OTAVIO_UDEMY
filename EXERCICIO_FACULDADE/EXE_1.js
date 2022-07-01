@@ -19,33 +19,39 @@ function multiplicacao(a, b) {
 function recarregar() {
     location.reload()    
 }
-function executar() {
+function imprimeResultado(valor) {
     let resultadoHtml = document.getElementById('resultado')
+    resultadoHtml.innerHTML = valor
+}
+function sinal(valor) {
     let sinalHtml = document.getElementById('sinalOperacao')
+    sinalHtml.innerHTML = valor
+}
+function executar() {
     let numeroA = parseFloat(document.getElementById("numeroA").value)
     let numeroB = parseFloat(document.getElementById("numeroB").value)
     if (document.getElementById('adicao').checked) {
         resultado = adicao(numeroA, numeroB)
-        sinalHtml.innerHTML = '+'
-        resultadoHtml.innerHTML = resultado
+        sinal('+')
+        imprimeResultado(resultado)
     }
     else if (document.getElementById("subtracao").checked) {
         resultado = subtracao(numeroA, numeroB)
-        sinalHtml.innerHTML = '-'
-        resultadoHtml.innerHTML = resultado
+        sinal('-')
+        imprimeResultado(resultado)
     }
     else if (document.getElementById("divisao").checked) {
         resultado = divisao(numeroA, numeroB)
-        sinalHtml.innerHTML = '/'
-        resultadoHtml.innerHTML = resultado
+        sinal('/')
+        imprimeResultado(resultado)
     }
-    else if (document.getElementById("multiplicacao").checked){
+    else if (document.getElementById("multiplicacao").checked) {
         resultado = multiplicacao(numeroA, numeroB)
-        sinalHtml.innerHTML = 'X'
-        resultadoHtml.innerHTML = resultado
+        sinal('X')
+        imprimeResultado(resultado)
     }
     else {
-        resultadoHtml.innerHTML = "Escolha uma operação"
+        imprimeResultado("Escolha uma operação") 
     }
 }
 // console.log(adicao(2, 4))
