@@ -1,0 +1,61 @@
+body{
+    height: 100%;
+    width: 100%;
+    color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    text-transform: uppercase;
+    background-image: url('depositphotos_104132380-stock-photo-numerology-energy-vortex.jpg');
+    background-size: cover;
+    background-position: center;
+  
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.operacoes{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 24px;
+}
+.entradaDados{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+.numeroA {
+    margin: 10px;
+}
+.numeroB{
+    margin: 10px;
+}
+#sinalOperacao{
+    text-align: center;
+    color: red;
+}
+.botoes{
+    margin: 20px;
+    cursor: pointer;
+    
+}
+
+.resultado h2{
+    border: 2px solid;
+    border-radius: 100px;
+    padding: 30px;
+    font-size: 28px;
+    background-color: black;
+    color: red;
+    ;
+}

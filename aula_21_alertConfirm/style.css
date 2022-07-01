@@ -1,0 +1,25 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.titulo {
+    color: #000000;
+}
+
+.container {
+    text-align: center;
+    border: 10px outset rgb(220, 36, 230);
+    padding: 50px;
+    height: 100px;
+    display: block;
+    background-color: rgb(60, 218, 218);
+    background-position: center;
+    margin: auto;
+    margin-top: 180px;
+    width: 300px;
+}

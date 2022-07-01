@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora</h1>
+        <div class="operacoes">
+            <div>
+                <input type="radio" name="operacao" id="adicao" value="ad">
+                <label for="adicao">Adição</label>
+            </div>
+            <div>
+                <input type="radio" name="operacao" id="subtracao" value="su">
+                <label for="subtracao">Subtração</label>
+            </div>
+            <div>
+                <input type="radio" name="operacao" id="divisao" value="di">
+                <label for="divisao">Divisão</label>
+            </div>
+            <div>
+                <input type="radio" name="operacao" id="multiplicacao" value="mu">
+                <label for="multiplicacao">Multiplicação</label>
+            </div>
+        </div>
+        <div class="entradaDados">
+            <div class="numeroA">
+                <label for="numeroA">Digite um número:</label>
+                <input type="text" name="numeroA" id="numeroA" required>
+            </div>
+            <h2 id="sinalOperacao">
+
+            </h2>
+            <div class="numeroB">
+                <label for="numeroB">Digite um número:</label>
+                <input type="text" name="numeroB" id="numeroB" required>
+            </div>
+        </div>
+        <div class="botoes">
+            <button type="submit" onclick="executar()">Resultado</button>
+            <button type="reset" onclick="recarregar()">Recarregar</button>
+        </div>
+
+        <div class="resultado">
+            <h2 id="resultado"></h2>
+        </div>
+    </div>
+    <script src="EXE_1.js"></script>
+</body>
+
+</html>
