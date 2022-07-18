@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <div class="container">
+        <input class="displayCalc" type="text" name="calc" id="calc" value="0">
+        <div class="grid">
+            <button class="botoes" type="submit" onclick="recarregar()">C</button>
+            <button class="botoes" type="submit" onclick="executaPonto()">.</button>
+            <button class="botoes" type="submit" onclick=""></button>
+            <button class="botoes" type="submit" onclick="n1()">1</button>
+            <button class="botoes" type="submit" onclick="n2()">2</button>
+            <button class="botoes" type="submit" onclick="n3()">3</button>
+            <button class="botoes" type="submit" onclick="n4()">4</button>
+            <button class="botoes" type="submit" onclick="n5()">5</button>
+            <button class="botoes" type="submit" onclick="n6()">6</button>
+            <button class="botoes" type="submit" onclick="n7()">7</button>
+            <button class="botoes" type="submit" onclick="n8()">8</button>
+            <button class="botoes" type="submit" onclick="n9()">9</button>
+            <button class="botoes" type="submit" onclick="n0()">0</button>
+            <button class="botoes" type="submit" onclick="executor('soma')">+</button>
+            <button class="botoes" type="submit" onclick="executor('sub')">-</button>
+            <button class="botoes" type="submit" onclick="executor('div')">/</button>
+            <button class="botoes" type="submit" onclick="executor('mult')">*</button>
+            <button class="botoes" type="submit" onclick="rQdr()">&radic;</button>
+        </div>
+        <div class="botoesLastDiv">
+            <button class="botoesLast" type="submit" onclick="operador('result')">=</button>
+        </div>
+        <div id="teste">
+            <p></p>
+        </div>
+    </div>
+    <script src="escripty.js"></script>
+</body>
+
+</html>

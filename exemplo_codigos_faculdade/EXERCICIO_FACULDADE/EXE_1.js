@@ -38,7 +38,7 @@ function sinaisOperacao(params){
         sinal('/')
     }
     else if (document.getElementById("multiplicacao").checked){
-        sinal('X')
+        sinal('*')
     }
 }
 function executar() {

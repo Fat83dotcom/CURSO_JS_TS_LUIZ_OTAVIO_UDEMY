@@ -6,13 +6,12 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 0px;
-    padding: 0px;
+    margin-top: 6%;
+    margin-bottom: 5%;
     text-transform: uppercase;
     background-image: url('depositphotos_104132380-stock-photo-numerology-energy-vortex.jpg');
     background-size: cover;
     background-position: center;
-  
 }
 .container{
     background-color: rgba(0, 0, 0, 0.8);
@@ -25,7 +24,7 @@ body{
 .operacoes{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     font-size: 24px;
 }
 .entradaDados{
@@ -34,28 +33,21 @@ body{
     justify-content: space-between;
     padding: 20px;
 }
-.numeroA {
-    margin: 10px;
-}
-.numeroB{
-    margin: 10px;
-}
 #sinalOperacao{
+    font-size: 48px;
     text-align: center;
-    color: red;
+    color: rgb(111, 101, 248);
+    margin: 10px;
 }
 .botoes{
     margin: 20px;
     cursor: pointer;
-    
 }
-
 .resultado h2{
     border: 2px solid;
     border-radius: 100px;
-    padding: 30px;
+    padding: 20px;
     font-size: 28px;
     background-color: black;
-    color: red;
-    ;
+    color: rgb(111, 101, 248);
 }
