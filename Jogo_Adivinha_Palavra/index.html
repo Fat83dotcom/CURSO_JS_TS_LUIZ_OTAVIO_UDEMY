@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Show Do Milhão</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="dificuldade">
+                <div class="box-1">
+                    <h3>Nível de Dificuldade</h3>
+                    <div class="checks">
+                        <input type="radio" name="level" id="facil" checked>
+                        <label for="facil">Easy</label>
+                        <input type="radio" name="level" id="medio">
+                        <label for="medio">Medium</label>
+                        <input type="radio" name="level" id="dificil">
+                        <label for="dificil">Hard</label>
+                    </div>
+                    <button class="hov-2" type="submit" onclick="setNivel()">Set</button>
+                </div>
+            </nav>
+            <h1>
+                Show Do Milhão
+            </h1>
+            <button class="hov" type="submit" onclick="dicas()">Dica</button>
+        </header>
+        <section class="palavra">
+            <h2 id="palavraChave"></h2>
+        </section>
+        <div class="caixaDoMeio">
+            <input type="text" name="usuario" id="entraLetra" placeholder="Seu palpite aqui !" maxlength="1">
+            <button class="hov" onclick="palpitar()">Palpitar !!!</button>
+        </div>
+        <section class="final">
+            <section>
+                <h3>
+                    Número de Tentivas:
+                </h3>
+                <p id="tentativas"></p>
+            </section>
+            <p id="textoFinal"></p>
+        </section>
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

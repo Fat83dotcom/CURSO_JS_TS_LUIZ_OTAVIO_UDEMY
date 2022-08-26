@@ -1,0 +1,111 @@
+body{
+    background-color: #0D0D0D;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+header {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+header h1{
+    color: #014034;
+}
+.box-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0D0D0D;
+    color: #36BFB1;
+    padding: 10px;
+    transition: 1000ms transform ;
+}
+.box-1:hover{
+    background-color: #014034;
+    transform: rotate(360deg);
+}
+.container{
+    background-color: #36BFB1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 90%;
+    border-radius: 50px;
+}
+.palavra {
+    background-color: #014034;
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    text-transform: uppercase;
+    color: #36BFB1;
+}
+.caixaDoMeio{
+    background-color: #02735E ;
+    width: 80%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+#entraLetra{
+    width: 10%;
+    height: 10vh;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: 2px solid #36BFB1 ;
+}
+.hov{
+    margin-top: 20px;
+    width: 10%;
+    height: 5vh;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px groove #36BFB1 ;
+    transition: all 1000ms ease-in-out, transform 1000ms;
+}
+.hov:hover{
+    color: #36BFB1;
+    background-color: #014034;
+    transform: rotate(360deg);   
+}
+.hov-2{
+    margin-top: 20px;
+    width: 30%;
+    height: 5vh;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px groove #36BFB1 ;
+}
+.hov-2:hover{
+    color: #014034;
+    background-color: #36BFB1;
+}
+.final{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #014034;
+    width: 80%;
+    height: 20vh;
+    text-transform: uppercase;
+    text-align:center;
+    color: #36BFB1;
+}
+.final #tentativas, #textoFinal{
+    font-size: 28px;
+}

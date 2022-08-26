@@ -1,0 +1,32 @@
+[
+    {
+        "id_palavra": 1,
+        "nome": "cachorro",
+        "categoria": "Animal"
+    },
+    {
+        "id_palavra": 2,
+        "nome": "rinoceronte",
+        "categoria": "Animal"
+    },
+    {
+        "id_palavra": 3,
+        "nome": "morango",
+        "categoria": "Fruta"
+    },
+    {
+        "id_palavra": 4,
+        "nome": "maracuja",
+        "categoria": "Fruta"
+    },
+    {
+        "id_palavra": 5,
+        "nome": "melancia",
+        "categoria": "Fruta"
+    },
+    {
+        "id_palavra": 6,
+        "nome": "manga",
+        "categoria": "Fruta"
+    }
+]

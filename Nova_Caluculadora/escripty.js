@@ -96,7 +96,7 @@ function receptor() {
 let arrayDeOperandos = [0, 0]
 let arrayDeOperacoes = []
 function executor(operacao) {
-    var doc = document.getElementById('teste')
+    let doc = document.getElementById('teste')
     arrayDeOperandos.push(parseFloat(receptor()))
     arrayDeOperacoes.push(operacao)
     apagaDisplay()
