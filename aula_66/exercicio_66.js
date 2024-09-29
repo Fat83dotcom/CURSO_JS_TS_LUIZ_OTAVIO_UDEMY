@@ -9,7 +9,6 @@ function timer() {
     var parentDisplay = document.querySelector('.display')
     var p = parentDisplay.querySelectorAll('p');
 
-
     function formatTimer(hour, minute, second) {
         let h = String(hour).padStart(2, '0');
         let m = String(minute).padStart(2, '0');
@@ -28,8 +27,7 @@ function timer() {
             p[0].style.color = "black";
             intervalID = setInterval(() => {
                 increaseTimer();
-                var formatedTimer = formatTimer(hours, minutes, seconds);
-                refreshTimer(formatedTimer);
+                refreshTimer(formatTimer(hours, minutes, seconds));
             }, 1000);
         }
     }
@@ -39,8 +37,7 @@ function timer() {
             controller = false;
             p[0].style.color = 'red';
             clearInterval(intervalID);
-            var formatedTimer = formatTimer(hours, minutes, seconds);
-            refreshTimer(formatedTimer);
+            refreshTimer(formatTimer(hours, minutes, seconds));
         }
     }
 
@@ -51,8 +48,7 @@ function timer() {
         controller = false;
         p[0].style.color = "black";
         clearInterval(intervalID);
-        var formatedTimer = formatTimer(hours, minutes, seconds);
-        refreshTimer(formatedTimer);
+        refreshTimer(formatTimer(hours, minutes, seconds));
     }
 
     function increaseTimer() {
@@ -83,8 +79,7 @@ function timer() {
     })
 
     window.onload = () =>{
-        var formatedTimer = formatTimer(hours, minutes, seconds);
-        refreshTimer(formatedTimer);
+        refreshTimer(formatTimer(hours, minutes, seconds));
     }
 }
 
