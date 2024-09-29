@@ -1,76 +1,94 @@
-var hours = 0;
-var minutes = 0;
-var seconds = 0;
-var controller = false;
-var intervalID;
+function timer() {
+    var hours = 0;
+    var minutes = 0;
+    var seconds = 0;
+    var controller = false;
+    var intervalID;
 
-var displayTimer = document.querySelector('.p-display');
-var parentDisplay = document.querySelector('.display')
-var p = parentDisplay.querySelectorAll('p');
-var displayStyle = getComputedStyle(displayTimer);
+    var displayTimer = document.querySelector('.p-display');
+    var parentDisplay = document.querySelector('.display')
+    var p = parentDisplay.querySelectorAll('p');
 
 
-function formatTimer(hour, minute, second) {
-    let h = String(hour).padStart(2, '0');
-    let m = String(minute).padStart(2, '0');
-    let s = String(second).padStart(2, '0');
+    function formatTimer(hour, minute, second) {
+        let h = String(hour).padStart(2, '0');
+        let m = String(minute).padStart(2, '0');
+        let s = String(second).padStart(2, '0');
 
-    return `${h}:${m}:${s}`
-}
-
-function refreshTimer(formatedTimer) {
-    displayTimer.innerHTML = formatedTimer;
-}
-
-function startTimer() {
-    if (!controller) {
-        controller = true;
-        p[0].style.color = "black";
-        intervalID = setInterval(() => {
-            increaseTimer();
-        }, 1000);
+        return `${h}:${m}:${s}`
     }
-}
 
-function pauseTimer() {
-    if (controller) {
-        controller = false;
-        p[0].style.color = 'red';
-        clearInterval(intervalID);
+    function refreshTimer(formatedTimer) {
+        displayTimer.innerHTML = formatedTimer;
     }
-}
 
-function resetTimer() {
-    hours = 0;
-    minutes = 0;
-    seconds = 0;
-    controller = false;
-    p[0].style.color = "black";
-    clearInterval(intervalID);
-}
-
-function increaseTimer() {
-    if (seconds !== 59) {
-        seconds++;
-    } else {
-        seconds = 0;
-        minutes++;
+    function startTimer() {
+        if (!controller) {
+            controller = true;
+            p[0].style.color = "black";
+            intervalID = setInterval(() => {
+                increaseTimer();
+                var formatedTimer = formatTimer(hours, minutes, seconds);
+                refreshTimer(formatedTimer);
+            }, 1000);
+        }
     }
-    if (minutes === 60) {
+
+    function pauseTimer() {
+        if (controller) {
+            controller = false;
+            p[0].style.color = 'red';
+            clearInterval(intervalID);
+            var formatedTimer = formatTimer(hours, minutes, seconds);
+            refreshTimer(formatedTimer);
+        }
+    }
+
+    function resetTimer() {
+        hours = 0;
         minutes = 0;
-        hours++;
+        seconds = 0;
+        controller = false;
+        p[0].style.color = "black";
+        clearInterval(intervalID);
+        var formatedTimer = formatTimer(hours, minutes, seconds);
+        refreshTimer(formatedTimer);
+    }
+
+    function increaseTimer() {
+        if (seconds !== 59) {
+            seconds++;
+        } else {
+            seconds = 0;
+            minutes++;
+        }
+        if (minutes === 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
+
+    document.addEventListener('click', (e) => {
+        const el = e.target;
+
+        if (el.id === 'start') {
+            startTimer();
+        }
+        if (el.id === 'pause') {
+            pauseTimer();
+        }
+        if (el.id === 'reset') {
+            resetTimer();
+        }
+    })
+
+    window.onload = () =>{
+        var formatedTimer = formatTimer(hours, minutes, seconds);
+        refreshTimer(formatedTimer);
     }
 }
 
-setInterval(() => {
-    var formatedTimer = formatTimer(hours, minutes, seconds);
-    refreshTimer(formatedTimer);
-}, 10);
-
-window.onload = () =>{
-    var formatedTimer = formatTimer(hours, minutes, seconds);
-    refreshTimer(formatedTimer);
-}
+timer();
 
 // function relogio() {
 //     function criaHoraDosSegundos(segundos) {
