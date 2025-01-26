@@ -1,0 +1,16 @@
+{
+  "name": "node_sqlite_erick",
+  "version": "1.0.0",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --inspect --watch --trace-warnings  src/script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "sql-bricks": "^3.0.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "aula_73",
+  "version": "1.0.0",
+  "main": "callback.js",
+  "scripts": {
+    "dev": "node --inspect --watch --trace-warnings  src/callback.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
